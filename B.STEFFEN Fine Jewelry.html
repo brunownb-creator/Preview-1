@@ -1,0 +1,966 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>B.STEFFEN Fine Jewelry</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="B.STEFFEN Fine Jewelry: brincos, anéis, pulseiras, colares e berloques em prata 925 italiana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: vitrine em uma coluna. Um fio dourado atravessa o topo e as categorias ficam penduradas nele, como a barra que liga o t ao ff no logotipo. */
+:root {
+  --bg: #F4F3F6;
+  --surface: #FFFFFF;
+  --ink: #1C1B22;
+  --muted: #5E606A;
+  --line: #DCDBE1;
+  --gold: #A8834E;
+  --gold-ink: #86663A;
+  --tile: #EBE1E4;
+  --band: #1C1B22;
+  --band-fg: #F4F3F6;
+  --band-muted: #B9B8C2;
+  --overlay: rgba(28, 27, 34, 0.46);
+  --shadow: rgba(28, 27, 34, 0.16);
+  --ok: #2F6B4F;
+
+  --display: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --body: "Jost", "Futura", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+
+  --gl: max(clamp(16px, 4vw, 44px), env(safe-area-inset-left, 0px));
+  --gr: max(clamp(16px, 4vw, 44px), env(safe-area-inset-right, 0px));
+  --maxw: 1240px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131217; --surface: #1C1B22; --ink: #EEEDF2; --muted: #A6A5B0; --line: #2E2D36;
+    --gold: #C9A46A; --gold-ink: #D7B680; --tile: #26212A; --band: #0B0A0E; --band-fg: #EEEDF2;
+    --band-muted: #A6A5B0; --overlay: rgba(0, 0, 0, 0.62); --shadow: rgba(0, 0, 0, 0.5); --ok: #7FC6A2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131217; --surface: #1C1B22; --ink: #EEEDF2; --muted: #A6A5B0; --line: #2E2D36;
+  --gold: #C9A46A; --gold-ink: #D7B680; --tile: #26212A; --band: #0B0A0E; --band-fg: #EEEDF2;
+  --band-muted: #A6A5B0; --overlay: rgba(0, 0, 0, 0.62); --shadow: rgba(0, 0, 0, 0.5); --ok: #7FC6A2;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--bg); }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-left: var(--gl); padding-right: var(--gr); box-sizing: border-box; }
+.label { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Faixa de aviso */
+.notice { background: var(--band); color: var(--band-muted); font-size: 13px; letter-spacing: 0.04em; }
+.notice .wrap { padding-block: 8px; text-align: center; }
+.notice strong { color: var(--band-fg); font-weight: 500; }
+
+/* Cabeçalho */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; padding-block: 14px; }
+.brand { display: inline-grid; justify-self: start; justify-items: center; gap: 7px; color: var(--ink); line-height: 0; text-decoration: none; }
+.brand-tag { font-size: 9.5px; line-height: 1; letter-spacing: 0.42em; text-indent: 0.42em; color: var(--muted); white-space: nowrap; }
+.brand svg { height: 20px; width: auto; display: block; }
+.b-dot { fill: var(--gold); }
+.nav { display: flex; justify-content: center; gap: clamp(16px, 2.6vw, 36px); }
+.nav a { text-decoration: none; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); padding: 6px 0; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.nav a:hover, .nav a[aria-current="true"] { color: var(--ink); border-color: var(--gold); }
+.bag-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 1px solid var(--ink); background: transparent; cursor: pointer; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; }
+.bag-btn:hover { background: var(--ink); color: var(--bg); }
+.bag-btn svg { width: 18px; height: 18px; }
+.bag-count { min-width: 22px; height: 22px; border-radius: 11px; background: var(--gold); color: #1C1B22; font-size: 12px; letter-spacing: 0; display: inline-grid; place-items: center; font-weight: 500; padding: 0 6px; box-sizing: border-box; }
+.bag-count[data-zero="true"] { background: transparent; color: inherit; border: 1px solid currentColor; }
+.subnav { display: none; }
+
+/* Hero */
+.hero .wrap { padding-block: clamp(40px, 7vw, 88px) 0; display: grid; gap: clamp(28px, 4vw, 48px); }
+.hero-copy { display: grid; gap: 22px; max-width: 760px; }
+.eyebrow { color: var(--gold-ink); }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(46px, 8.4vw, 112px); line-height: 0.98; letter-spacing: -0.02em; font-variation-settings: "opsz" 96; }
+.hero h1 em { font-style: italic; color: var(--gold-ink); }
+.hero p { font-size: clamp(17px, 1.6vw, 19px); font-weight: 300; color: var(--muted); max-width: 56ch; }
+.ctas { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 26px; background: var(--ink); color: var(--bg); border: 1px solid var(--ink); text-decoration: none; cursor: pointer; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; transition: background .2s, color .2s; }
+.btn:hover { background: transparent; color: var(--ink); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--bg); }
+.btn.gold { background: var(--gold); border-color: var(--gold); color: #1C1B22; }
+.btn.gold:hover { background: transparent; color: var(--ink); }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+.link { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+.link:hover { color: var(--gold-ink); }
+
+/* O fio: categorias penduradas */
+.fio-scroll { overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--gl) * -1) calc(var(--gr) * -1); padding-inline: var(--gl) var(--gr); }
+.fio-scroll::-webkit-scrollbar { display: none; }
+.fio { position: relative; display: grid; grid-template-columns: repeat(5, minmax(96px, 1fr)); min-width: 520px; padding-bottom: clamp(16px, 3vw, 32px); }
+.fio::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1.5px; background: var(--gold); }
+.fio::after { content: ""; position: absolute; left: -5px; right: -5px; top: -4px; height: 9px; background: radial-gradient(circle at 4.5px 4.5px, var(--gold) 4px, transparent 4.5px) left / 9px 9px no-repeat, radial-gradient(circle at 4.5px 4.5px, var(--gold) 4px, transparent 4.5px) right / 9px 9px no-repeat; }
+.pend { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--ink); transform-origin: 50% 0; animation: settle 2.4s cubic-bezier(.3,.6,.3,1) both; }
+.pend:nth-child(2) { animation-delay: .12s; } .pend:nth-child(3) { animation-delay: .24s; } .pend:nth-child(4) { animation-delay: .36s; } .pend:nth-child(5) { animation-delay: .48s; }
+.pend .thread { width: 1.5px; background: var(--gold); height: var(--len, 48px); }
+.pend svg { width: clamp(92px, 12vw, 156px); height: auto; display: block; margin-top: -1px; }
+.pend .pl { margin-top: 10px; display: grid; justify-items: center; gap: 2px; }
+.pend .pl span:first-child { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
+.pend .pl span:last-child { font-size: 12px; color: var(--muted); }
+.pend:hover { animation: sway 1.6s ease-in-out; }
+.pend:hover .pl span:first-child { color: var(--gold-ink); }
+@keyframes settle { 0% { transform: rotate(4deg); } 35% { transform: rotate(-2.4deg); } 65% { transform: rotate(1deg); } 100% { transform: rotate(0); } }
+@keyframes sway { 0% { transform: rotate(0); } 25% { transform: rotate(3deg); } 55% { transform: rotate(-2deg); } 80% { transform: rotate(.8deg); } 100% { transform: rotate(0); } }
+
+/* Seções */
+section { scroll-margin-top: 80px; }
+.sec { padding-block: clamp(56px, 8vw, 104px); }
+.sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; margin-bottom: 28px; }
+.sec-head h2, .h2 { font-family: var(--display); font-weight: 400; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.04; letter-spacing: -0.015em; font-variation-settings: "opsz" 72; }
+.sec-head p { color: var(--muted); max-width: 52ch; }
+
+/* Coleção: filtros */
+.tools { display: grid; gap: 14px; margin-bottom: 28px; padding-block: 18px; border-block: 1px solid var(--line); }
+.tools-row { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { min-height: 40px; padding: 0 16px; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; transition: border-color .2s, background .2s; }
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; box-shadow: inset 0 0 0 1px rgba(0,0,0,.18); }
+.dot.prata { background: linear-gradient(135deg, #FDFDFE, #B9BDC5 55%, #E3E5EA); }
+.dot.ouro { background: linear-gradient(135deg, #FBEBC6, #CFA65F 55%, #F0D69E); }
+.dot.rose { background: linear-gradient(135deg, #FCE6DE, #CF9586 55%, #F2CDC1); }
+.tool-fields { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.field { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); min-height: 40px; padding: 0 12px; background: var(--surface); }
+.field input, .field select { border: 0; background: transparent; outline: none; min-height: 38px; font-size: 14px; }
+.field input { width: 170px; }
+.field:focus-within { border-color: var(--gold); }
+.field svg { width: 16px; height: 16px; color: var(--muted); flex: none; }
+.count { font-size: 13px; color: var(--muted); }
+
+/* Coleção: grade */
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 2vw, 28px) clamp(12px, 1.6vw, 24px); }
+.card { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.card-media { aspect-ratio: 1 / 1; max-width: 100%; background: var(--tile); border: 0; padding: 0; cursor: pointer; display: grid; place-items: center; position: relative; overflow: hidden; }
+.card-media svg { width: 84%; height: 84%; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.card-media:hover svg { transform: scale(1.05); }
+.card-media .tag { position: absolute; left: 10px; top: 10px; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; background: var(--surface); color: var(--ink); padding: 4px 8px; }
+.card-body { display: grid; gap: 6px; }
+.card h3 { font-family: var(--body); font-weight: 400; font-size: 16px; line-height: 1.35; }
+.card-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.price { font-size: 16px; font-weight: 500; }
+.tones { display: flex; gap: 6px; }
+.tone-btn { width: 26px; height: 26px; border-radius: 50%; border: 1px solid transparent; background: transparent; padding: 0; display: grid; place-items: center; cursor: pointer; }
+.tone-btn[aria-pressed="true"] { border-color: var(--ink); }
+.tone-btn .dot { width: 16px; height: 16px; }
+.add { min-height: 44px; border: 1px solid var(--ink); background: transparent; cursor: pointer; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; transition: background .2s, color .2s; }
+.add:hover { background: var(--ink); color: var(--bg); }
+.empty { grid-column: 1 / -1; padding: 48px 0; text-align: center; color: var(--muted); display: grid; gap: 14px; justify-items: center; }
+
+/* Prata 925 */
+.steel { background: var(--band); color: var(--band-fg); }
+.steel .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.steel .h2 { color: var(--band-fg); }
+.steel p { color: var(--band-muted); }
+.steel-intro { display: grid; gap: 20px; }
+.hallmark { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; border: 1.5px solid var(--gold); border-radius: 3px; padding: 10px 18px; justify-self: start; }
+.hallmark b { font-family: var(--display); font-weight: 500; font-size: 26px; line-height: 1; color: var(--band-fg); }
+.hallmark span { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.fact { display: grid; gap: 10px; align-content: start; padding-top: 18px; border-top: 1px solid color-mix(in srgb, var(--gold) 60%, transparent); }
+.fact h3 { font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1.1; color: var(--band-fg); }
+
+/* Guia de aros */
+.guide .wrap { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 40px clamp(32px, 6vw, 88px); align-items: start; }
+.guide-copy { display: grid; gap: 22px; }
+.guide-copy > p { color: var(--muted); max-width: 52ch; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: baseline; }
+.steps li::before { content: counter(s); font-family: var(--display); font-size: 26px; color: var(--gold-ink); line-height: 1; }
+.calc { background: var(--surface); border: 1px solid var(--line); padding: clamp(20px, 3vw, 32px); display: grid; gap: 18px; }
+.calc-modes { display: flex; gap: 8px; flex-wrap: wrap; }
+.calc label { font-size: 13px; color: var(--muted); display: grid; gap: 6px; }
+.calc input { min-height: 48px; border: 1px solid var(--line); background: var(--bg); padding: 0 14px; font-size: 18px; width: 100%; box-sizing: border-box; }
+.calc input:focus { border-color: var(--gold); outline: none; }
+.result { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; min-height: 72px; }
+.result b { font-family: var(--display); font-weight: 400; font-size: 64px; line-height: 1; }
+.result span { color: var(--muted); font-size: 14px; }
+.table-box { grid-column: 1 / -1; overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; text-align: center; }
+tr:last-child th, tr:last-child td { border-bottom: 0; }
+th { position: sticky; left: 0; background: var(--surface); text-align: left; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; color: var(--muted); border-right: 1px solid var(--line); }
+tr:first-child td { font-family: var(--display); font-size: 20px; }
+td.hit { background: color-mix(in srgb, var(--gold) 20%, transparent); font-weight: 500; }
+
+/* Como comprar e cuidados */
+.howto .wrap { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 6vw, 88px); }
+.howto ol, .howto ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 16px; }
+.howto ol { counter-reset: s; }
+.howto ol li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 12px; }
+.howto ol li::before { content: counter(s); font-family: var(--display); font-size: 26px; line-height: 1.1; color: var(--gold-ink); }
+.howto ul li { padding-left: 22px; position: relative; }
+.howto ul li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 1.5px; background: var(--gold); }
+.howto h2 { margin-bottom: 22px; }
+.howto .col { display: grid; align-content: start; }
+.howto li b { font-weight: 500; }
+.howto li span { color: var(--muted); }
+
+/* Rodapé */
+footer { background: var(--band); color: var(--band-muted); }
+footer .wrap { padding-block: 56px calc(40px + env(safe-area-inset-bottom, 0px)); display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 40px; }
+.f-brand { display: grid; gap: 12px; justify-items: start; color: var(--band-fg); }
+.f-brand { align-content: start; }
+.f-lock { display: inline-grid; gap: 12px; align-content: start; }
+.f-brand svg { height: 30px; width: auto; display: block; }
+.f-tag { display: flex; justify-content: center; align-items: center; gap: 10px; color: var(--gold); font-size: 11px; letter-spacing: 0.3em; text-indent: 0.3em; white-space: nowrap; }
+.f-tag::before, .f-tag::after { content: ""; width: 26px; height: 1px; background: currentColor; }
+footer h3 { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--band-fg); margin-bottom: 12px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--band-fg); }
+.legal { grid-column: 1 / -1; border-top: 1px solid color-mix(in srgb, var(--band-muted) 25%, transparent); padding-top: 20px; font-size: 13px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+/* Painéis: produto e sacola */
+.scrim { position: fixed; inset: 0; background: var(--overlay); z-index: 70; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(440px, 100%); background: var(--surface); z-index: 80; display: grid; grid-template-rows: auto 1fr auto; box-shadow: -20px 0 50px var(--shadow); padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); padding-right: env(safe-area-inset-right, 0px); box-sizing: border-box; }
+.drawer-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.drawer-head h2 { font-family: var(--display); font-weight: 400; font-size: 28px; }
+.x { width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.x svg { width: 20px; height: 20px; }
+.items { overflow-y: auto; padding: 8px 22px; display: grid; align-content: start; }
+.item { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.item .thumb { width: 76px; height: 76px; background: var(--tile); display: grid; place-items: center; }
+.item .thumb svg { width: 88%; height: 88%; }
+.item h3 { font-size: 15px; font-weight: 400; line-height: 1.35; }
+.item .opts { font-size: 13px; color: var(--muted); }
+.qty { display: inline-flex; align-items: center; border: 1px solid var(--line); margin-top: 8px; }
+.qty button { width: 36px; height: 36px; border: 0; background: transparent; cursor: pointer; font-size: 18px; line-height: 1; }
+.qty output { min-width: 28px; text-align: center; font-size: 14px; }
+.item-right { display: grid; justify-items: end; gap: 6px; }
+.rm { border: 0; background: transparent; cursor: pointer; font-size: 12px; color: var(--muted); text-decoration: underline; padding: 4px 0; min-height: 32px; }
+.drawer-foot { border-top: 1px solid var(--line); padding: 18px 22px 22px; display: grid; gap: 12px; }
+.sum { display: flex; justify-content: space-between; align-items: baseline; font-size: 15px; }
+.sum b { font-size: 22px; font-weight: 500; }
+.foot-note { font-size: 13px; color: var(--muted); }
+.copy-status { font-size: 13px; color: var(--ok); min-height: 1.2em; }
+.drawer-empty { display: grid; gap: 16px; justify-items: center; text-align: center; padding: 64px 12px; color: var(--muted); }
+.drawer-empty svg { width: 120px; height: auto; }
+
+.modal { position: fixed; z-index: 80; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(920px, calc(100% - 32px)); max-height: calc(100% - 32px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); overflow-y: auto; background: var(--surface); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); box-shadow: 0 30px 80px var(--shadow); }
+.modal-media { background: var(--tile); display: grid; place-items: center; aspect-ratio: 1 / 1; max-width: 100%; position: relative; }
+.modal-media svg { width: 86%; height: 86%; }
+.modal-info { padding: clamp(22px, 3vw, 36px); display: grid; gap: 18px; align-content: start; position: relative; }
+.modal-info .x { position: absolute; right: 8px; top: 8px; }
+.modal-info h2 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 3vw, 38px); line-height: 1.08; padding-right: 40px; }
+.modal-info .desc { color: var(--muted); }
+.modal-info .mat { color: var(--gold-ink); }
+.opt { display: grid; gap: 8px; }
+.opt > span { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.opt select { min-height: 44px; border: 1px solid var(--line); background: var(--bg); padding: 0 12px; font-size: 15px; }
+.opt .hint { font-size: 13px; color: var(--muted); }
+.opt .hint a { color: var(--gold-ink); }
+.buy-row { display: flex; gap: 12px; align-items: stretch; flex-wrap: wrap; }
+.buy-row .qty { margin-top: 0; }
+.buy-row .qty button { height: 46px; width: 42px; }
+.buy-row .btn { flex: 1 1 200px; }
+.err { color: #B4443A; font-size: 13px; min-height: 1.2em; }
+
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 90; background: var(--ink); color: var(--bg); padding: 12px 20px; font-size: 14px; display: flex; gap: 16px; align-items: center; box-shadow: 0 12px 30px var(--shadow); max-width: calc(100% - 32px); box-sizing: border-box; }
+.toast button { border: 0; background: transparent; color: var(--gold); cursor: pointer; text-decoration: underline; font-size: 14px; padding: 6px 0; }
+
+/* Telas menores */
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .steel .wrap, .guide .wrap { grid-template-columns: minmax(0, 1fr); }
+  .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .nav { display: none; }
+  .top .wrap { grid-template-columns: 1fr auto; }
+  .subnav { display: block; border-top: 1px solid var(--line); }
+  .subnav .wrap { display: block; padding-block: 0; }
+  .subnav-row { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; padding-block: 10px; }
+  .subnav-row::-webkit-scrollbar { display: none; }
+  .subnav a { flex: none; text-decoration: none; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); padding: 6px 0; }
+  .howto .wrap { grid-template-columns: minmax(0, 1fr); }
+  footer .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .f-brand { grid-column: 1 / -1; }
+  .modal { grid-template-columns: minmax(0, 1fr); }
+  .modal-media { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 640px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .brand svg { height: 15px; }
+  .brand-tag { font-size: 8px; letter-spacing: 0.32em; text-indent: 0.32em; }
+  .brand { gap: 5px; }
+  .bag-btn .bag-label { display: none; }
+  .bag-btn { padding: 0 12px; }
+  .tool-fields { width: 100%; }
+  .tool-fields .field { flex: 1 1 140px; }
+  .field input { width: 100%; min-width: 0; }
+  .card h3 { font-size: 14.5px; }
+  .card-row { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .pend, .pend:hover { animation: none; }
+  .card-media svg { transition: none; }
+}
+</style>
+
+<!-- Definições dos metais: usadas por todas as ilustrações -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="m-prata" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="44" spreadMethod="reflect">
+      <stop offset="0" stop-color="#FDFDFE"/><stop offset=".4" stop-color="#D3D6DC"/><stop offset=".78" stop-color="#8F939C"/><stop offset="1" stop-color="#C4C7CE"/>
+    </linearGradient>
+    <linearGradient id="m-ouro" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="44" spreadMethod="reflect">
+      <stop offset="0" stop-color="#FCEFCF"/><stop offset=".4" stop-color="#DDB775"/><stop offset=".78" stop-color="#9A7436"/><stop offset="1" stop-color="#CDA45F"/>
+    </linearGradient>
+    <linearGradient id="m-rose" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="44" spreadMethod="reflect">
+      <stop offset="0" stop-color="#FFEDE7"/><stop offset=".4" stop-color="#E4AE9F"/><stop offset=".78" stop-color="#A86B5D"/><stop offset="1" stop-color="#D99C8C"/>
+    </linearGradient>
+    <radialGradient id="gem" cx=".38" cy=".34" r=".75">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#E4EAF3"/><stop offset="1" stop-color="#A6B2C6"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+</svg>
+
+<div class="notice"><div class="wrap">Monte sua sacola aqui e <strong>finalize o pedido pelo WhatsApp</strong></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="B.STEFFEN Fine Jewelry, voltar ao início"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="-4.1 -160 1251.1 171"><path fill="currentColor" d="M3.9 0V-0.9H65.5Q74 -0.9 81 -6.2Q88 -11.5 92.25 -20.8Q96.5 -30.1 96.5 -42Q96.5 -53.9 92.25 -61.55Q88 -69.2 81 -72.9Q74 -76.6 65.6 -76.6H42.2V-77.3H68.7Q83.2 -77.3 95.25 -73.85Q107.3 -70.4 114.55 -62.55Q121.8 -54.7 121.8 -41.4Q121.8 -19.1 107.7 -9.55Q93.6 0 68.8 0ZM21.8 -0.4V-149.6H44.3V-0.4ZM42.2 -76.7V-77.5H63.6Q71.1 -77.5 77.65 -80.9Q84.2 -84.3 88.35 -91.7Q92.5 -99.1 92.5 -111Q92.5 -122.9 88.35 -131.4Q84.2 -139.9 77.6 -144.5Q71 -149.1 63.6 -149.1H3.9V-150H64.7Q88 -150 101.9 -141.25Q115.8 -132.5 115.8 -113Q115.8 -93.7 102.65 -85.2Q89.5 -76.7 64.7 -76.7Z"/><path class="b-dot" fill="#A8834E" d="M178 2Q174.2 2 171.1 0.15Q168 -1.7 166.15 -4.8Q164.3 -7.9 164.3 -11.7Q164.3 -15.4 166.15 -18.55Q168 -21.7 171.1 -23.55Q174.2 -25.4 178 -25.4Q181.7 -25.4 184.85 -23.55Q188 -21.7 189.85 -18.55Q191.7 -15.4 191.7 -11.7Q191.7 -7.9 189.85 -4.8Q188 -1.7 184.85 0.15Q181.7 2 178 2Z"/><path fill="currentColor" d="M284.8 3Q272 3 263.05 -1.05Q254.1 -5.1 248.2 -12L235.3 2H234.5V-40.7H235.4Q237.4 -31.9 241.15 -24.15Q244.9 -16.4 250.65 -10.55Q256.4 -4.7 264.5 -1.4Q272.6 1.9 283.4 1.9Q293.7 1.9 301.4 -1.9Q309.1 -5.7 313.3 -12.9Q317.5 -20.1 317.5 -30.3Q317.5 -38.9 313.15 -44.85Q308.8 -50.8 301.6 -55.15Q294.4 -59.5 285.75 -63.3Q277.1 -67.1 268.5 -71.25Q259.9 -75.4 252.7 -81.05Q245.5 -86.7 241.1 -94.7Q236.7 -102.7 236.7 -114.2Q236.7 -125.6 242.6 -134.1Q248.5 -142.6 258.1 -147.3Q267.7 -152 278.9 -152Q288.8 -152 296.85 -148.9Q304.9 -145.8 310.7 -139.3L323.3 -152H324.1V-109.9H323.2Q320.7 -123.6 314.8 -132.7Q308.9 -141.8 300.25 -146.25Q291.6 -150.7 280.7 -150.7Q266.9 -150.7 259.8 -143.7Q252.7 -136.7 252.7 -125.3Q252.7 -117.6 257 -112.2Q261.3 -106.8 268.35 -102.65Q275.4 -98.5 283.85 -94.7Q292.3 -90.9 300.8 -86.45Q309.3 -82 316.3 -76Q323.3 -70 327.6 -61.45Q331.9 -52.9 331.9 -40.8Q331.9 -27.6 326.05 -17.75Q320.2 -7.9 309.55 -2.45Q298.9 3 284.8 3Z"/><path fill="currentColor" d="M395.8 0V-0.9H417.8V-149.1H399.8Q391.2 -149.1 385.4 -145.7Q379.6 -142.3 376.05 -136.2Q372.5 -130.1 370.85 -121.9Q369.2 -113.7 368.8 -104.2H367.9V-150H490.1V-104.2H489.2Q488.8 -113.7 487.15 -121.9Q485.5 -130.1 481.95 -136.2Q478.4 -142.3 472.55 -145.7Q466.7 -149.1 458.2 -149.1H440.2V-0.9H462.2V0Z"/><path fill="currentColor" d="M523.8 0V-0.9H541.7V-149.1H523.8V-150H631.5V-109H630.6Q630.2 -119.7 626.25 -128.85Q622.3 -138 614.55 -143.55Q606.8 -149.1 595.1 -149.1H564.2V-0.9H593Q606.8 -0.9 615.35 -6.65Q623.9 -12.4 628.05 -22.35Q632.2 -32.3 632.6 -45H633.5V0ZM597.5 -54.8Q597.1 -61.5 593.85 -66.5Q590.6 -71.5 585.5 -74.3Q580.4 -77.1 574.7 -77.1H556.5V-78H574.7Q580.4 -78 585.5 -80.55Q590.6 -83.1 593.85 -87.9Q597.1 -92.7 597.5 -99.4H598.4V-54.8Z"/><path fill="currentColor" d="M744.6 -52.5Q744.2 -59.2 741.05 -64.05Q737.9 -68.9 732.05 -71.55Q726.2 -74.2 717.9 -74.2H704.8V-75H717.9Q726.2 -75 732.05 -77.4Q737.9 -79.8 741.05 -84.4Q744.2 -89 744.6 -95.7H745.5V-52.5ZM775.1 -150V-109H774.2Q773.7 -119.7 769.9 -128.85Q766.1 -138 758.55 -143.55Q751 -149.1 739.4 -149.1H710V-0.9H730V0H669.6V-0.9H687.5V-149.1H669.6V-150Z"/><path fill="currentColor" d="M886.1 -52.5Q885.7 -59.2 882.55 -64.05Q879.4 -68.9 873.55 -71.55Q867.7 -74.2 859.4 -74.2H846.3V-75H859.4Q867.7 -75 873.55 -77.4Q879.4 -79.8 882.55 -84.4Q885.7 -89 886.1 -95.7H887V-52.5ZM916.6 -150V-109H915.7Q915.2 -119.7 911.4 -128.85Q907.6 -138 900.05 -143.55Q892.5 -149.1 880.9 -149.1H851.5V-0.9H871.5V0H811.1V-0.9H829V-149.1H811.1V-150Z"/><path fill="currentColor" d="M952.6 0V-0.9H970.5V-149.1H952.6V-150H1060.3V-109H1059.4Q1059 -119.7 1055.05 -128.85Q1051.1 -138 1043.35 -143.55Q1035.6 -149.1 1023.9 -149.1H993V-0.9H1021.8Q1035.6 -0.9 1044.15 -6.65Q1052.7 -12.4 1056.85 -22.35Q1061 -32.3 1061.4 -45H1062.3V0ZM1026.3 -54.8Q1025.9 -61.5 1022.65 -66.5Q1019.4 -71.5 1014.3 -74.3Q1009.2 -77.1 1003.5 -77.1H985.3V-78H1003.5Q1009.2 -78 1014.3 -80.55Q1019.4 -83.1 1022.65 -87.9Q1025.9 -92.7 1026.3 -99.4H1027.2V-54.8Z"/><path fill="currentColor" d="M1119.2 -150V-0.9H1143.1V0H1098.4V-0.9H1118.3V-149.1H1098.4V-150ZM1239 -150V-149.1H1218V2H1216.9L1118.7 -150H1145.5L1217.1 -36.2V-149.1H1193.4V-150Z"/></svg><span class="brand-tag" aria-hidden="true">FINE JEWELRY</span></a>
+    <nav class="nav" aria-label="Categorias" id="nav"></nav>
+    <button class="bag-btn" id="bagBtn" type="button" aria-label="Abrir sacola">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg>
+      <span class="bag-label">Sacola</span>
+      <span class="bag-count num" id="bagCount" data-zero="true">0</span>
+    </button>
+  </div>
+  <div class="subnav"><div class="wrap"><div class="subnav-row" id="subnav"></div></div></div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="label eyebrow">B.STEFFEN Fine Jewelry</span>
+        <h1 id="heroTitle">Joias para usar <em>todo dia.</em></h1>
+        <p>Brincos, anéis, pulseiras, colares e berloques em prata 925 italiana. Escolha o tom, monte sua sacola e finalize o pedido pelo WhatsApp.</p>
+        <div class="ctas">
+          <a class="btn" href="#colecao">Ver coleção</a>
+          <a class="link" href="#guia-de-aros">Descobrir meu aro</a>
+        </div>
+      </div>
+      <div class="fio-scroll">
+        <nav class="fio" id="fio" aria-label="Categorias penduradas no fio"></nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="colecao" aria-labelledby="colTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="colTitle">Coleção</h2>
+        <p>Toque no tom para ver a peça em prateado, dourado ou rosé. Anéis pedem o aro antes de ir para a sacola.</p>
+      </div>
+      <div class="tools">
+        <div class="tools-row">
+          <div class="chips" id="catChips" role="group" aria-label="Filtrar por categoria"></div>
+        </div>
+        <div class="tools-row">
+          <div class="chips" id="toneChips" role="group" aria-label="Filtrar por tom"></div>
+          <div class="tool-fields">
+            <label class="field" for="q">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+              <span class="sr">Buscar peça</span>
+              <input id="q" type="search" placeholder="Buscar peça" autocomplete="off">
+            </label>
+            <label class="field" for="sort">
+              <span class="sr">Ordenar</span>
+              <select id="sort">
+                <option value="destaque">Destaques</option>
+                <option value="menor">Menor preço</option>
+                <option value="maior">Maior preço</option>
+                <option value="nome">Nome</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <p class="count num" id="count" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="steel sec" aria-labelledby="steelTitle">
+    <div class="wrap">
+      <div class="steel-intro">
+        <div class="hallmark" aria-hidden="true"><b>B.</b><span>prata 925</span></div>
+        <h2 class="h2" id="steelTitle">Prata 925 italiana</h2>
+        <p>Todas as peças da B.STEFFEN são de prata 925 italiana. O 925 quer dizer que a liga tem 92,5% de prata pura. O resto são metais que dão firmeza, porque prata pura sozinha é mole demais para virar joia.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><h3>Carimbo 925</h3><p>É a marca da prata de lei. Ela indica o teor de prata da liga e costuma vir gravada na peça.</p></div>
+        <div class="fact"><h3>Escureceu? Tem volta</h3><p>Com o tempo, ar e suor escurecem a prata. Uma flanela própria para prata devolve o brilho.</p></div>
+        <div class="fact"><h3>Dourado e rosé</h3><p>As versões dourada e rosé recebem um banho sobre a prata 925. Longe de perfume e cloro, o banho dura mais.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide sec" id="guia-de-aros" aria-labelledby="guideTitle">
+    <div class="wrap">
+      <div class="guide-copy">
+        <span class="label eyebrow">Antes de comprar um anel</span>
+        <h2 class="h2" id="guideTitle">Guia de aros</h2>
+        <p>No Brasil o tamanho do anel é o aro. A conta é simples: a circunferência do dedo em milímetros, menos 40. Um dedo com 56 mm de volta usa aro 16.</p>
+        <ol class="steps">
+          <li><span>Enrole um barbante ou uma tira de papel na base do dedo, sem apertar.</span></li>
+          <li><span>Marque onde a ponta encontra o resto e meça na régua, em milímetros.</span></li>
+          <li><span>Digite a medida ao lado. Se ficar entre dois aros, escolha o maior.</span></li>
+        </ol>
+      </div>
+      <div class="calc">
+        <div class="calc-modes chips" role="group" aria-label="Como você vai medir">
+          <button class="chip" type="button" id="modeCirc" aria-pressed="true">Volta do dedo</button>
+          <button class="chip" type="button" id="modeDiam" aria-pressed="false">Anel que já serve</button>
+        </div>
+        <label for="medida"><span id="medidaLabel">Volta do dedo, em mm</span>
+          <input id="medida" type="number" inputmode="decimal" min="40" max="80" step="0.5" value="56">
+        </label>
+        <div class="result" aria-live="polite"><b class="num" id="aroOut">16</b><span id="aroTxt">é o seu aro</span></div>
+      </div>
+      <div class="table-box">
+        <table>
+          <caption class="sr">Tabela de aros com volta e diâmetro interno em milímetros</caption>
+          <tbody id="aroTable" class="num"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="howto sec" aria-label="Como comprar e como cuidar" style="padding-top: 0">
+    <div class="wrap">
+      <div class="col">
+        <h2 class="h2">Como comprar</h2>
+        <ol>
+          <li><div><b>Escolha as peças e o tom.</b> <span>Prata, dourado ou rosé, conforme a peça.</span></div></li>
+          <li><div><b>Revise a sacola.</b> <span>Confira aro dos anéis, letra dos berloques e quantidades.</span></div></li>
+          <li><div><b>Finalize pelo WhatsApp.</b> <span>A mensagem já vai com o pedido pronto. Lá você combina pagamento e entrega com a gente.</span></div></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h2 class="h2">Como cuidar</h2>
+        <ul>
+          <li><b>Guarde fechado.</b> <span>Cada peça no seu saquinho fechado ou na caixa. Menos contato com o ar, menos escurecimento.</span></li>
+          <li><b>Joia por último.</b> <span>Passe perfume, creme e protetor antes de colocar a joia.</span></li>
+          <li><b>Tire para piscina e praia.</b> <span>Cloro e água do mar escurecem a prata e gastam o banho.</span></li>
+          <li><b>Limpe com flanela de prata.</b> <span>Nada de pasta de dente ou produto abrasivo, que risca a peça.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">
+      <div class="f-lock">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="-4.1 -160 1251.1 171"><path fill="currentColor" d="M3.9 0V-0.9H65.5Q74 -0.9 81 -6.2Q88 -11.5 92.25 -20.8Q96.5 -30.1 96.5 -42Q96.5 -53.9 92.25 -61.55Q88 -69.2 81 -72.9Q74 -76.6 65.6 -76.6H42.2V-77.3H68.7Q83.2 -77.3 95.25 -73.85Q107.3 -70.4 114.55 -62.55Q121.8 -54.7 121.8 -41.4Q121.8 -19.1 107.7 -9.55Q93.6 0 68.8 0ZM21.8 -0.4V-149.6H44.3V-0.4ZM42.2 -76.7V-77.5H63.6Q71.1 -77.5 77.65 -80.9Q84.2 -84.3 88.35 -91.7Q92.5 -99.1 92.5 -111Q92.5 -122.9 88.35 -131.4Q84.2 -139.9 77.6 -144.5Q71 -149.1 63.6 -149.1H3.9V-150H64.7Q88 -150 101.9 -141.25Q115.8 -132.5 115.8 -113Q115.8 -93.7 102.65 -85.2Q89.5 -76.7 64.7 -76.7Z"/><path class="b-dot" fill="#A8834E" d="M178 2Q174.2 2 171.1 0.15Q168 -1.7 166.15 -4.8Q164.3 -7.9 164.3 -11.7Q164.3 -15.4 166.15 -18.55Q168 -21.7 171.1 -23.55Q174.2 -25.4 178 -25.4Q181.7 -25.4 184.85 -23.55Q188 -21.7 189.85 -18.55Q191.7 -15.4 191.7 -11.7Q191.7 -7.9 189.85 -4.8Q188 -1.7 184.85 0.15Q181.7 2 178 2Z"/><path fill="currentColor" d="M284.8 3Q272 3 263.05 -1.05Q254.1 -5.1 248.2 -12L235.3 2H234.5V-40.7H235.4Q237.4 -31.9 241.15 -24.15Q244.9 -16.4 250.65 -10.55Q256.4 -4.7 264.5 -1.4Q272.6 1.9 283.4 1.9Q293.7 1.9 301.4 -1.9Q309.1 -5.7 313.3 -12.9Q317.5 -20.1 317.5 -30.3Q317.5 -38.9 313.15 -44.85Q308.8 -50.8 301.6 -55.15Q294.4 -59.5 285.75 -63.3Q277.1 -67.1 268.5 -71.25Q259.9 -75.4 252.7 -81.05Q245.5 -86.7 241.1 -94.7Q236.7 -102.7 236.7 -114.2Q236.7 -125.6 242.6 -134.1Q248.5 -142.6 258.1 -147.3Q267.7 -152 278.9 -152Q288.8 -152 296.85 -148.9Q304.9 -145.8 310.7 -139.3L323.3 -152H324.1V-109.9H323.2Q320.7 -123.6 314.8 -132.7Q308.9 -141.8 300.25 -146.25Q291.6 -150.7 280.7 -150.7Q266.9 -150.7 259.8 -143.7Q252.7 -136.7 252.7 -125.3Q252.7 -117.6 257 -112.2Q261.3 -106.8 268.35 -102.65Q275.4 -98.5 283.85 -94.7Q292.3 -90.9 300.8 -86.45Q309.3 -82 316.3 -76Q323.3 -70 327.6 -61.45Q331.9 -52.9 331.9 -40.8Q331.9 -27.6 326.05 -17.75Q320.2 -7.9 309.55 -2.45Q298.9 3 284.8 3Z"/><path fill="currentColor" d="M395.8 0V-0.9H417.8V-149.1H399.8Q391.2 -149.1 385.4 -145.7Q379.6 -142.3 376.05 -136.2Q372.5 -130.1 370.85 -121.9Q369.2 -113.7 368.8 -104.2H367.9V-150H490.1V-104.2H489.2Q488.8 -113.7 487.15 -121.9Q485.5 -130.1 481.95 -136.2Q478.4 -142.3 472.55 -145.7Q466.7 -149.1 458.2 -149.1H440.2V-0.9H462.2V0Z"/><path fill="currentColor" d="M523.8 0V-0.9H541.7V-149.1H523.8V-150H631.5V-109H630.6Q630.2 -119.7 626.25 -128.85Q622.3 -138 614.55 -143.55Q606.8 -149.1 595.1 -149.1H564.2V-0.9H593Q606.8 -0.9 615.35 -6.65Q623.9 -12.4 628.05 -22.35Q632.2 -32.3 632.6 -45H633.5V0ZM597.5 -54.8Q597.1 -61.5 593.85 -66.5Q590.6 -71.5 585.5 -74.3Q580.4 -77.1 574.7 -77.1H556.5V-78H574.7Q580.4 -78 585.5 -80.55Q590.6 -83.1 593.85 -87.9Q597.1 -92.7 597.5 -99.4H598.4V-54.8Z"/><path fill="currentColor" d="M744.6 -52.5Q744.2 -59.2 741.05 -64.05Q737.9 -68.9 732.05 -71.55Q726.2 -74.2 717.9 -74.2H704.8V-75H717.9Q726.2 -75 732.05 -77.4Q737.9 -79.8 741.05 -84.4Q744.2 -89 744.6 -95.7H745.5V-52.5ZM775.1 -150V-109H774.2Q773.7 -119.7 769.9 -128.85Q766.1 -138 758.55 -143.55Q751 -149.1 739.4 -149.1H710V-0.9H730V0H669.6V-0.9H687.5V-149.1H669.6V-150Z"/><path fill="currentColor" d="M886.1 -52.5Q885.7 -59.2 882.55 -64.05Q879.4 -68.9 873.55 -71.55Q867.7 -74.2 859.4 -74.2H846.3V-75H859.4Q867.7 -75 873.55 -77.4Q879.4 -79.8 882.55 -84.4Q885.7 -89 886.1 -95.7H887V-52.5ZM916.6 -150V-109H915.7Q915.2 -119.7 911.4 -128.85Q907.6 -138 900.05 -143.55Q892.5 -149.1 880.9 -149.1H851.5V-0.9H871.5V0H811.1V-0.9H829V-149.1H811.1V-150Z"/><path fill="currentColor" d="M952.6 0V-0.9H970.5V-149.1H952.6V-150H1060.3V-109H1059.4Q1059 -119.7 1055.05 -128.85Q1051.1 -138 1043.35 -143.55Q1035.6 -149.1 1023.9 -149.1H993V-0.9H1021.8Q1035.6 -0.9 1044.15 -6.65Q1052.7 -12.4 1056.85 -22.35Q1061 -32.3 1061.4 -45H1062.3V0ZM1026.3 -54.8Q1025.9 -61.5 1022.65 -66.5Q1019.4 -71.5 1014.3 -74.3Q1009.2 -77.1 1003.5 -77.1H985.3V-78H1003.5Q1009.2 -78 1014.3 -80.55Q1019.4 -83.1 1022.65 -87.9Q1025.9 -92.7 1026.3 -99.4H1027.2V-54.8Z"/><path fill="currentColor" d="M1119.2 -150V-0.9H1143.1V0H1098.4V-0.9H1118.3V-149.1H1098.4V-150ZM1239 -150V-149.1H1218V2H1216.9L1118.7 -150H1145.5L1217.1 -36.2V-149.1H1193.4V-150Z"/></svg><span class="sr">B.STEFFEN</span>
+        <span class="f-tag">FINE JEWELRY</span>
+      </div>
+    </div>
+    <div>
+      <h3>Categorias</h3>
+      <ul id="footCats"></ul>
+    </div>
+    <div>
+      <h3>Atendimento</h3>
+      <ul>
+        <li>Pedidos e dúvidas pelo WhatsApp</li>
+        <li><a href="#guia-de-aros">Guia de aros</a></li>
+        <li><a href="#colecao">Coleção completa</a></li>
+      </ul>
+    </div>
+    <div class="legal"><span>© 2026 B.STEFFEN</span><span>Imagens ilustrativas</span></div>
+  </div>
+</footer>
+
+<!-- Painel do produto -->
+<div class="scrim" id="scrim" hidden></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="modal-media" id="mMedia"></div>
+  <div class="modal-info">
+    <button class="x" type="button" id="mClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+    <span class="label mat" id="mCat"></span>
+    <h2 id="mTitle"></h2>
+    <div class="price num" id="mPrice"></div>
+    <p class="desc" id="mDesc"></p>
+    <div class="opt"><span>Tom</span><div class="chips" id="mTones" role="group" aria-label="Escolha o tom"></div></div>
+    <div class="opt" id="mAroBox" hidden>
+      <label for="mAro"><span class="label">Aro</span></label>
+      <select id="mAro"></select>
+      <span class="hint">Não sabe o seu? <a href="#guia-de-aros" id="mGuide">Use o guia de aros</a>.</span>
+    </div>
+    <div class="opt" id="mLetraBox" hidden>
+      <label for="mLetra"><span class="label">Letra</span></label>
+      <select id="mLetra"></select>
+    </div>
+    <div class="buy-row">
+      <div class="qty" role="group" aria-label="Quantidade">
+        <button type="button" id="mMinus" aria-label="Diminuir quantidade">−</button>
+        <output id="mQty" class="num">1</output>
+        <button type="button" id="mPlus" aria-label="Aumentar quantidade">+</button>
+      </div>
+      <button class="btn" type="button" id="mAdd">Adicionar à sacola</button>
+    </div>
+    <p class="err" id="mErr" aria-live="polite"></p>
+  </div>
+</div>
+
+<!-- Sacola -->
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" hidden>
+  <div class="drawer-head">
+    <h2 id="dTitle">Sacola</h2>
+    <button class="x" type="button" id="dClose" aria-label="Fechar sacola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  </div>
+  <div class="items" id="items"></div>
+  <div class="drawer-foot" id="dFoot">
+    <div class="sum"><span>Subtotal</span><b class="num" id="subtotal">R$ 0,00</b></div>
+    <p class="foot-note">Frete e forma de pagamento são combinados na conversa.</p>
+    <a class="btn gold" id="waBtn" href="#" target="_blank" rel="noopener">Finalizar pelo WhatsApp</a>
+    <button class="btn ghost" type="button" id="copyBtn">Copiar pedido</button>
+    <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" hidden><span id="toastTxt"></span><button type="button" id="toastBtn">Ver sacola</button></div>
+
+<script>
+(() => {
+  // Número do WhatsApp da loja: só dígitos, com 55 e DDD. Ex.: 5511912345678
+  // Vazio: o WhatsApp abre com a mensagem pronta e a cliente escolhe o contato.
+  const WHATSAPP = '';
+
+  const CATS = [
+    { id: 'brincos', nome: 'Brincos', len: 44, art: 'h-gota' },
+    { id: 'aneis', nome: 'Anéis', len: 84, art: 'h-anel' },
+    { id: 'pulseiras', nome: 'Pulseiras', len: 58, art: 'h-bangle' },
+    { id: 'colares', nome: 'Colares', len: 96, art: 'h-medalha' },
+    { id: 'berloques', nome: 'Berloques', len: 52, art: 'h-coracao' },
+  ];
+  const TONES = { prata: 'Prata', ouro: 'Dourado', rose: 'Rosé' };
+  const AROS = Array.from({ length: 15 }, (_, i) => 12 + i);
+  const LETRAS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+  const P = [
+    { id: 'argola-fina', cat: 'brincos', nome: 'Argola Fina Lisa', preco: 69.9, tons: ['prata', 'ouro'], art: 'argola', desc: 'Argola delicada e leve, com fecho de pressão. Combina com tudo.' },
+    { id: 'brinco-ponto-de-luz', cat: 'brincos', nome: 'Brinco Ponto de Luz', preco: 49.9, tons: ['prata', 'ouro', 'rose'], art: 'pontoluz', desc: 'Pedra brilhante presa em garras finas. O brinco que você esquece que está usando.' },
+    { id: 'brinco-gota', cat: 'brincos', nome: 'Brinco Gota Polida', preco: 79.9, tons: ['prata', 'ouro'], art: 'gota', desc: 'Gota lisa e espelhada, com movimento leve. Para a noite ou o fim de semana.' },
+    { id: 'ear-cuff', cat: 'brincos', nome: 'Ear Cuff Duplo', preco: 59.9, tons: ['prata', 'ouro'], art: 'cuff', desc: 'Dois aros finos que encaixam na cartilagem sem precisar de furo. Use sozinho ou junto com argolas.' },
+    { id: 'anel-solitario', cat: 'aneis', nome: 'Anel Solitário', preco: 89.9, tons: ['prata', 'ouro', 'rose'], art: 'solitario', aro: true, desc: 'Uma pedra central sobre aro fino de prata 925. Serve para presente e para o dia a dia.' },
+    { id: 'alianca-lisa', cat: 'aneis', nome: 'Aliança Lisa 4 mm', preco: 69.9, tons: ['prata', 'ouro'], art: 'alianca', aro: true, desc: 'Aro liso e confortável em prata 925, com acabamento espelhado.' },
+    { id: 'anel-torcido', cat: 'aneis', nome: 'Anel Torcido', preco: 74.9, tons: ['prata', 'ouro', 'rose'], art: 'torcido', aro: true, desc: 'Dois fios de prata 925 entrelaçados. Fica bonito sozinho ou empilhado.' },
+    { id: 'meia-alianca', cat: 'aneis', nome: 'Meia Aliança Cravejada', preco: 99.9, tons: ['prata', 'ouro'], art: 'meia', aro: true, desc: 'Pedras na metade da frente do aro, em prata 925. Brilho sem exagero.' },
+    { id: 'pulseira-elo-portugues', cat: 'pulseiras', nome: 'Pulseira Elo Português', preco: 89.9, tons: ['prata', 'ouro'], art: 'eloportugues', desc: 'Corrente de elos alternados, clássica e resistente.' },
+    { id: 'pulseira-riviera', cat: 'pulseiras', nome: 'Pulseira Riviera', preco: 129.9, tons: ['prata', 'ouro'], art: 'riviera', desc: 'Pedras em sequência por toda a volta do pulso.' },
+    { id: 'pulseira-para-berloques', cat: 'pulseiras', nome: 'Pulseira para Berloques', preco: 99.9, tons: ['prata', 'ouro', 'rose'], art: 'paraberloques', desc: 'A base para você montar a sua com os berloques da coleção.' },
+    { id: 'bracelete-aberto', cat: 'pulseiras', nome: 'Bracelete Aberto', preco: 79.9, tons: ['prata', 'ouro'], art: 'bracelete', desc: 'Bracelete rígido com pontas em bolinha. Ajuste abrindo ou fechando com cuidado.' },
+    { id: 'corrente-singapura', cat: 'colares', nome: 'Corrente Singapura', preco: 79.9, tons: ['prata', 'ouro'], art: 'singapura', desc: 'Corrente torcida que reflete a luz em todo movimento.' },
+    { id: 'colar-ponto-de-luz', cat: 'colares', nome: 'Colar Ponto de Luz', preco: 89.9, tons: ['prata', 'ouro', 'rose'], art: 'colarpontoluz', desc: 'Corrente fina com uma pedra pendente que fica no centro do colo.' },
+    { id: 'colar-medalha', cat: 'colares', nome: 'Colar Medalha', preco: 99.9, tons: ['prata', 'ouro'], art: 'medalha', desc: 'Medalha lisa com borda em relevo, em corrente fina.' },
+    { id: 'choker-bolinhas', cat: 'colares', nome: 'Choker de Bolinhas', preco: 69.9, tons: ['prata', 'ouro'], art: 'choker', desc: 'Bolinhas polidas em fio curto, rente ao pescoço.' },
+    { id: 'berloque-coracao', cat: 'berloques', nome: 'Berloque Coração', preco: 39.9, tons: ['prata', 'ouro', 'rose'], art: 'coracao', desc: 'Coração polido com argola. Vai na pulseira ou no colar.' },
+    { id: 'berloque-estrela', cat: 'berloques', nome: 'Berloque Estrela', preco: 39.9, tons: ['prata', 'ouro'], art: 'estrela', desc: 'Estrela de cinco pontas com relevo em cada braço.' },
+    { id: 'berloque-inicial', cat: 'berloques', nome: 'Berloque Inicial', preco: 44.9, tons: ['prata', 'ouro', 'rose'], art: 'letra', letra: true, desc: 'Medalhinha com a letra que você escolher.' },
+    { id: 'berloque-trevo', cat: 'berloques', nome: 'Berloque Trevo', preco: 39.9, tons: ['prata', 'ouro'], art: 'trevo', desc: 'Trevo de quatro folhas com um ponto de luz no centro.' },
+  ];
+  const byId = Object.fromEntries(P.map(p => [p.id, p]));
+  // Destaques: alterna as categorias para a vitrine não abrir com quatro brincos seguidos
+  const DESTAQUE = [];
+  for (let i = 0; i < 4; i++) CATS.forEach(c => { const p = P.filter(x => x.cat === c.id)[i]; if (p) DESTAQUE.push(p.id); });
+
+  const brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+  const money = v => brl.format(v).replace(/ /g, ' ');
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const $ = id => document.getElementById(id);
+
+  /* ---------- Ilustrações das peças (SVG, caixa 200 x 200) ---------- */
+  const M = t => `url(#m-${t})`;
+  const f = n => Math.round(n * 10) / 10;
+  const ell = (cx, cy, rx, ry) => `M${f(cx - rx)},${f(cy)} a${f(rx)},${f(ry)} 0 1,0 ${f(2 * rx)},0 a${f(rx)},${f(ry)} 0 1,0 ${f(-2 * rx)},0 Z`;
+  const floor = (cy = 178, rx = 50) => `<ellipse cx="100" cy="${cy}" rx="${rx}" ry="5" style="fill:var(--shadow)" filter="url(#soft)"/>`;
+  const shine = 'rgba(255,255,255,.6)';
+  const dark = (o) => `rgba(20,16,12,${o})`;
+
+  function ring3d(cx, cy, rx, ry, t, h, tone) {
+    const ri = rx - t, rri = ry - t * (ry / rx);
+    const back = `M${f(cx - ri)},${cy} A${f(ri)},${f(rri)} 0 0 1 ${f(cx + ri)},${cy} L${f(cx + ri)},${cy + h} A${f(ri)},${f(rri)} 0 0 0 ${f(cx - ri)},${cy + h} Z`;
+    const front = `M${cx - rx},${cy} L${cx - rx},${cy + h} A${rx},${ry} 0 0 0 ${cx + rx},${cy + h} L${cx + rx},${cy} A${rx},${ry} 0 0 1 ${cx - rx},${cy} Z`;
+    return `<path d="${back}" fill="${M(tone)}"/><path d="${back}" fill="${dark(.28)}"/>`
+      + `<path d="${front}" fill="${M(tone)}"/><path d="${front}" fill="${dark(.12)}"/>`
+      + `<path fill-rule="evenodd" d="${ell(cx, cy, rx, ry)} ${ell(cx, cy, ri, rri)}" fill="${M(tone)}"/>`
+      + `<path d="M${f(cx - rx * .8)},${f(cy - ry * .6)} A${rx},${ry} 0 0 1 ${f(cx + rx * .2)},${f(cy - ry * .98)}" fill="none" stroke="${shine}" stroke-width="1.6" stroke-linecap="round"/>`;
+  }
+  function diamond(cx, cy, w, tone) {
+    const pts = [[cx - w * .28, cy - w * .3], [cx + w * .28, cy - w * .3], [cx + w * .5, cy], [cx, cy + w * .55], [cx - w * .5, cy]];
+    const poly = pts.map(p => p.map(f).join(',')).join(' ');
+    const L = (a, b) => `<line x1="${f(a[0])}" y1="${f(a[1])}" x2="${f(b[0])}" y2="${f(b[1])}"/>`;
+    const tip = [cx, cy + w * .55];
+    return `<polygon points="${poly}" fill="url(#gem)" stroke="${M(tone)}" stroke-width="1.4" stroke-linejoin="round"/>`
+      + `<g stroke="rgba(255,255,255,.85)" stroke-width=".8">${L(pts[0], [cx - w * .12, cy])}${L(pts[1], [cx + w * .12, cy])}${L([cx - w * .5, cy], [cx + w * .5, cy])}${L([cx - w * .12, cy], tip)}${L([cx + w * .12, cy], tip)}${L(pts[0], [cx - w * .5, cy])}</g>`
+      + `<g stroke="rgba(120,135,160,.45)" stroke-width=".7">${L([cx - w * .5, cy], tip)}${L([cx + w * .5, cy], tip)}</g>`;
+  }
+  function stone(cx, cy, r, tone) {
+    const pr = [45, 135, 225, 315].map(a => { const t = a * Math.PI / 180; return `<circle cx="${f(cx + Math.cos(t) * r * 1.02)}" cy="${f(cy + Math.sin(t) * r * 1.02)}" r="${f(r * .26)}" fill="${M(tone)}"/>`; }).join('');
+    const star = [0, 60, 120].map(a => { const t = a * Math.PI / 180; return `<line x1="${f(cx - Math.cos(t) * r * .7)}" y1="${f(cy - Math.sin(t) * r * .7)}" x2="${f(cx + Math.cos(t) * r * .7)}" y2="${f(cy + Math.sin(t) * r * .7)}"/>`; }).join('');
+    return `<circle cx="${cx}" cy="${cy}" r="${f(r * 1.25)}" fill="${M(tone)}"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#gem)"/>`
+      + `<g stroke="rgba(255,255,255,.8)" stroke-width=".8">${star}</g><circle cx="${f(cx - r * .3)}" cy="${f(cy - r * .35)}" r="${f(r * .22)}" fill="#fff"/>${pr}`;
+  }
+  const jump = (cx, cy, r, tone) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${M(tone)}" stroke-width="${f(r * .42)}"/>`;
+  const heartPath = (s = 1, ox = 0, oy = 0) => {
+    const p = [[100, 150], [62, 124], [50, 100], [62, 82], [74, 64], [96, 68], [100, 86], [104, 68], [126, 64], [138, 82], [150, 100], [138, 124], [100, 150]]
+      .map(([x, y]) => [f(ox + (x - 100) * s + 100), f(oy + (y - 108) * s + 108)]);
+    return `M${p[0]} C${p[1]} ${p[2]} ${p[3]} C${p[4]} ${p[5]} ${p[6]} C${p[7]} ${p[8]} ${p[9]} C${p[10]} ${p[11]} ${p[12]} Z`;
+  };
+  const starPts = (cx, cy, R, r) => Array.from({ length: 10 }, (_, i) => { const a = -Math.PI / 2 + i * Math.PI / 5; const rr = i % 2 ? r : R; return [cx + Math.cos(a) * rr, cy + Math.sin(a) * rr]; });
+  const bez = (t, p0, p1, p2, p3) => { const u = 1 - t; return [u * u * u * p0[0] + 3 * u * u * t * p1[0] + 3 * u * t * t * p2[0] + t * t * t * p3[0], u * u * u * p0[1] + 3 * u * u * t * p1[1] + 3 * u * t * t * p2[1] + t * t * t * p3[1]]; };
+  function chainLinks(cx, cy, rx, ry, n, tone, big, small, sw) {
+    let s = '';
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2;
+      const x = cx + rx * Math.cos(a), y = cy + ry * Math.sin(a);
+      const deg = Math.atan2(ry * Math.cos(a), -rx * Math.sin(a)) * 180 / Math.PI;
+      const [lx, ly] = i % 2 ? small : big;
+      s += `<ellipse cx="${f(x)}" cy="${f(y)}" rx="${lx}" ry="${ly}" transform="rotate(${f(deg)} ${f(x)} ${f(y)})" fill="none" stroke="${M(tone)}" stroke-width="${sw}"/>`;
+    }
+    return s;
+  }
+
+  const ART = {
+    argola: (t) => floor(176, 62)
+      + [62, 138].map(x => `<line x1="${x}" y1="58" x2="${x}" y2="70" stroke="${M(t)}" stroke-width="2.4"/><circle cx="${x}" cy="104" r="34" fill="none" stroke="${M(t)}" stroke-width="6.5"/><path d="M${x - 26},84 A34,34 0 0 1 ${x + 6},70.5" fill="none" stroke="${shine}" stroke-width="1.6" stroke-linecap="round"/>`).join(''),
+    pontoluz: (t) => floor(150, 54) + stone(70, 104, 15, t) + stone(130, 104, 15, t),
+    gota: (t) => floor(178, 56) + [70, 130].map(x => jump(x, 56, 6, t)
+      + `<path d="M${x},64 C${x + 24},96 ${x + 26},128 ${x},146 C${x - 26},128 ${x - 24},96 ${x},64 Z" fill="${M(t)}"/><path d="M${x - 8},94 C${x - 12},108 ${x - 12},120 ${x - 6},130" fill="none" stroke="${shine}" stroke-width="3" stroke-linecap="round"/>`).join(''),
+    cuff: (t) => floor(170, 46)
+      + `<path d="M84,52 A46,50 0 1 1 84,148" fill="none" stroke="${M(t)}" stroke-width="5.5" stroke-linecap="round"/>`
+      + `<path d="M92,66 A34,36 0 1 1 92,134" fill="none" stroke="${M(t)}" stroke-width="5.5" stroke-linecap="round"/>`
+      + `<path d="M100,56 A42,46 0 0 1 136,84" fill="none" stroke="${shine}" stroke-width="1.6" stroke-linecap="round"/>`
+      + [[84, 52], [84, 148], [92, 66], [92, 134]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="6" fill="${M(t)}"/>`).join(''),
+    solitario: (t) => floor(166, 56) + ring3d(100, 118, 54, 26, 7, 9, t)
+      + `<polygon points="90,96 110,96 105,82 95,82" fill="${M(t)}"/>` + diamond(100, 74, 34, t),
+    alianca: (t) => floor(168, 60) + ring3d(100, 108, 58, 28, 10, 18, t),
+    torcido: (t) => floor(166, 58) + ring3d(100, 110, 56, 27, 8, 8, t)
+      + `<path d="${ell(100, 110, 52, 23)}" fill="none" stroke="${dark(.25)}" stroke-width="7" stroke-dasharray="5 7"/>`
+      + `<path d="${ell(100, 110, 52, 23)}" fill="none" stroke="${shine}" stroke-width="1.2" stroke-dasharray="5 7" stroke-dashoffset="-6"/>`,
+    meia: (t) => {
+      let g = floor(166, 58) + ring3d(100, 108, 56, 27, 9, 10, t);
+      for (let i = 0; i < 9; i++) { const a = (20 + i * 17.5) * Math.PI / 180; g += `<circle cx="${f(100 + 51.5 * Math.cos(a))}" cy="${f(108 + 22.6 * Math.sin(a))}" r="3.9" fill="url(#gem)" stroke="${M(t)}" stroke-width="1.2"/>`; }
+      return g;
+    },
+    eloportugues: (t) => floor(170, 60) + chainLinks(100, 100, 66, 46, 30, t, [7.4, 4.2], [4.6, 2.8], 2.6) + `<rect x="160" y="94" width="14" height="12" rx="3" fill="${M(t)}"/>`,
+    riviera: (t) => {
+      let g = floor(170, 62) + `<path d="${ell(100, 100, 66, 46)}" fill="none" stroke="${M(t)}" stroke-width="2.4"/>`;
+      for (let i = 0; i < 28; i++) { const a = i / 28 * Math.PI * 2; g += `<circle cx="${f(100 + 66 * Math.cos(a))}" cy="${f(100 + 46 * Math.sin(a))}" r="5" fill="url(#gem)" stroke="${M(t)}" stroke-width="1.6"/>`; }
+      return g;
+    },
+    paraberloques: (t) => {
+      let g = floor(182, 60) + chainLinks(100, 92, 64, 42, 46, t, [3.6, 2.2], [3.6, 2.2], 1.8);
+      const at = (deg) => { const a = deg * Math.PI / 180; return [100 + 64 * Math.cos(a), 92 + 42 * Math.sin(a)]; };
+      const [x1, y1] = at(66), [x2, y2] = at(90), [x3, y3] = at(114);
+      g += `<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x1)}" y2="${f(y1 + 8)}" stroke="${M(t)}" stroke-width="1.6"/><path d="${heartPath(.3, x1 - 100, y1 + 22 - 108)}" fill="${M(t)}"/>`;
+      g += `<line x1="${f(x2)}" y1="${f(y2)}" x2="${f(x2)}" y2="${f(y2 + 7)}" stroke="${M(t)}" stroke-width="1.6"/><polygon points="${starPts(x2, y2 + 19, 12, 5).map(p => p.map(f).join(',')).join(' ')}" fill="${M(t)}" stroke="${M(t)}" stroke-width="2" stroke-linejoin="round"/>`;
+      g += `<line x1="${f(x3)}" y1="${f(y3)}" x2="${f(x3)}" y2="${f(y3 + 8)}" stroke="${M(t)}" stroke-width="1.6"/><circle cx="${f(x3)}" cy="${f(y3 + 18)}" r="9" fill="${M(t)}"/><circle cx="${f(x3)}" cy="${f(y3 + 18)}" r="6.5" fill="none" stroke="${dark(.2)}"/>`;
+      return g;
+    },
+    bracelete: (t) => {
+      const p = (deg) => { const a = deg * Math.PI / 180; return [f(100 + 64 * Math.cos(a)), f(100 + 44 * Math.sin(a))]; };
+      const [ax, ay] = p(26), [bx, by] = p(334);
+      return floor(170, 62) + `<path d="M${ax},${ay} A64,44 0 1,1 ${bx},${by}" fill="none" stroke="${M(t)}" stroke-width="10" stroke-linecap="round"/>`
+        + `<path d="M${p(200)} A64,44 0 0,1 ${p(290)}" fill="none" stroke="${shine}" stroke-width="2" stroke-linecap="round"/>`
+        + `<circle cx="${ax}" cy="${ay}" r="8.5" fill="${M(t)}"/><circle cx="${bx}" cy="${by}" r="8.5" fill="${M(t)}"/>`;
+    },
+    singapura: (t) => {
+      const d = 'M30,24 C38,150 162,150 170,24';
+      return `<path d="${d}" fill="none" stroke="${M(t)}" stroke-width="4"/><path d="${d}" fill="none" stroke="${dark(.3)}" stroke-width="4" stroke-dasharray="1.6 2.6"/><path d="${d}" fill="none" stroke="${shine}" stroke-width="1.2" stroke-dasharray="1.6 2.6" stroke-dashoffset="2"/>`;
+    },
+    colarpontoluz: (t) => `<path d="M30,24 C38,140 162,140 170,24" fill="none" stroke="${M(t)}" stroke-width="1.6"/>` + jump(100, 117, 4.5, t) + stone(100, 136, 11, t),
+    medalha: (t) => `<path d="M30,24 C38,140 162,140 170,24" fill="none" stroke="${M(t)}" stroke-width="2"/>` + jump(100, 116, 5, t)
+      + `<circle cx="100" cy="146" r="25" fill="${M(t)}"/><circle cx="100" cy="146" r="20" fill="none" stroke="${dark(.2)}" stroke-width="1.2"/><circle cx="100" cy="146" r="25" fill="none" stroke="${dark(.15)}"/><path d="M84,136 A20,20 0 0 1 104,126" fill="none" stroke="${shine}" stroke-width="2" stroke-linecap="round"/>`,
+    choker: (t) => {
+      const P0 = [34, 40], P1 = [44, 132], P2 = [156, 132], P3 = [166, 40];
+      let g = `<path d="M34,40 C44,132 156,132 166,40" fill="none" stroke="${M(t)}" stroke-width="1"/>`;
+      for (let i = 0; i <= 20; i++) { const [x, y] = bez(i / 20, P0, P1, P2, P3); g += `<circle cx="${f(x)}" cy="${f(y)}" r="5" fill="${M(t)}"/><circle cx="${f(x - 1.6)}" cy="${f(y - 1.8)}" r="1.4" fill="${shine}"/>`; }
+      return g;
+    },
+    coracao: (t) => floor(170, 40) + jump(100, 78, 7, t) + `<path d="${heartPath()}" fill="${M(t)}"/><path d="M68,96 C68,84 80,76 92,84" fill="none" stroke="${shine}" stroke-width="3" stroke-linecap="round"/>`,
+    estrela: (t) => {
+      const pts = starPts(100, 116, 46, 20);
+      const ribs = pts.filter((_, i) => i % 2 === 0).map(p => `<line x1="100" y1="116" x2="${f(p[0])}" y2="${f(p[1])}"/>`).join('');
+      return floor(176, 44) + jump(100, 62, 7, t) + `<polygon points="${pts.map(p => p.map(f).join(',')).join(' ')}" fill="${M(t)}" stroke="${M(t)}" stroke-width="4" stroke-linejoin="round"/><g stroke="${dark(.18)}" stroke-width="1.2">${ribs}</g>`;
+    },
+    letra: (t, o = {}) => floor(166, 40) + jump(100, 68, 7, t)
+      + `<circle cx="100" cy="112" r="36" fill="${M(t)}"/><circle cx="100" cy="112" r="30" fill="none" stroke="${dark(.18)}" stroke-width="1.2"/>`
+      + `<text x="100" y="127" text-anchor="middle" font-family="Bodoni Moda, Didot, Georgia, serif" font-size="44" fill="${dark(.55)}">${esc(o.letra || 'A')}</text>`,
+    trevo: (t) => floor(176, 40) + jump(100, 78, 7, t)
+      + `<path d="M104,136 C108,146 112,150 120,156" fill="none" stroke="${M(t)}" stroke-width="4" stroke-linecap="round"/>`
+      + [[100, 98], [114, 112], [100, 126], [86, 112]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="14" fill="${M(t)}"/>`).join('')
+      + `<g stroke="${dark(.16)}" stroke-width="1"><line x1="100" y1="112" x2="100" y2="88"/><line x1="100" y1="112" x2="124" y2="112"/><line x1="100" y1="112" x2="100" y2="136"/><line x1="100" y1="112" x2="76" y2="112"/></g>`
+      + stone(100, 112, 5, t),
+
+    /* Pingentes do fio (com linha até o topo) */
+    'h-gota': (t) => `<line x1="100" y1="0" x2="100" y2="34" stroke="var(--gold)" style="stroke:var(--gold)" stroke-width="3"/>` + jump(100, 42, 8, t)
+      + `<path d="M100,52 C130,92 134,132 100,156 C66,132 70,92 100,52 Z" fill="${M(t)}"/><path d="M90,92 C84,110 84,126 92,140" fill="none" stroke="${shine}" stroke-width="3.5" stroke-linecap="round"/>`,
+    'h-anel': (t) => `<line x1="100" y1="0" x2="100" y2="44" style="stroke:var(--gold)" stroke-width="3"/>`
+      + `<circle cx="100" cy="120" r="44" fill="none" stroke="${M(t)}" stroke-width="10"/><circle cx="100" cy="120" r="39" fill="none" stroke="${dark(.18)}" stroke-width="1.5"/>`
+      + `<polygon points="91,78 109,78 104,66 96,66" fill="${M(t)}"/>` + diamond(100, 58, 30, t),
+    'h-bangle': (t) => `<line x1="100" y1="0" x2="100" y2="58" style="stroke:var(--gold)" stroke-width="3"/>`
+      + `<circle cx="100" cy="112" r="50" fill="none" stroke="${M(t)}" stroke-width="9"/><path d="M62,84 A50,50 0 0 1 104,62" fill="none" stroke="${shine}" stroke-width="2" stroke-linecap="round"/>`,
+    'h-medalha': (t) => `<line x1="100" y1="0" x2="100" y2="38" style="stroke:var(--gold)" stroke-width="3"/>` + jump(100, 46, 8, t)
+      + `<circle cx="100" cy="108" r="52" fill="${M(t)}"/><circle cx="100" cy="108" r="43" fill="none" stroke="${dark(.2)}" stroke-width="1.6"/><path d="M66,86 A43,43 0 0 1 108,66" fill="none" stroke="${shine}" stroke-width="3" stroke-linecap="round"/>`,
+    'h-coracao': (t) => `<line x1="100" y1="0" x2="100" y2="40" style="stroke:var(--gold)" stroke-width="3"/>` + jump(100, 48, 8, t)
+      + `<path d="${heartPath(1.32, 0, 30)}" fill="${M(t)}"/><path d="M58,112 C58,96 74,86 88,96" fill="none" stroke="${shine}" stroke-width="3.5" stroke-linecap="round"/>`,
+  };
+  const art = (key, tone, o) => `<svg viewBox="0 0 200 200" role="img" aria-hidden="true" focusable="false">${ART[key](tone, o)}</svg>`;
+
+  /* ---------- Estado ---------- */
+  const state = { cat: 'todos', tone: 'todos', sort: 'destaque', q: '' };
+  const cardTone = {};
+  let cart = [];
+  try { cart = JSON.parse(localStorage.getItem('hsteffen-sacola') || '[]').filter(i => byId[i.id]); } catch (e) { cart = []; }
+  const save = () => { try { localStorage.setItem('hsteffen-sacola', JSON.stringify(cart)); } catch (e) {} };
+
+  /* ---------- Navegação e fio ---------- */
+  const countIn = id => P.filter(p => p.cat === id).length;
+  $('nav').innerHTML = CATS.map(c => `<a href="#${c.id}" data-cat="${c.id}">${c.nome}</a>`).join('');
+  $('subnav').innerHTML = CATS.map(c => `<a href="#${c.id}">${c.nome}</a>`).join('');
+  $('footCats').innerHTML = CATS.map(c => `<li><a href="#${c.id}">${c.nome}</a></li>`).join('');
+  $('fio').innerHTML = CATS.map((c, i) => `<a class="pend" href="#${c.id}" style="--len:${c.len}px"><span class="thread"></span>${art(c.art, ['ouro', 'prata', 'rose', 'ouro', 'rose'][i])}<span class="pl"><span>${c.nome}</span><span>${countIn(c.id)} peças</span></span></a>`).join('');
+
+  /* ---------- Filtros ---------- */
+  function renderChips() {
+    const cats = [{ id: 'todos', nome: 'Tudo' }, ...CATS];
+    $('catChips').innerHTML = cats.map(c => `<button type="button" class="chip" data-cat="${c.id}" aria-pressed="${state.cat === c.id}">${c.nome}</button>`).join('');
+    const tones = [['todos', 'Todos os tons'], ...Object.entries(TONES)];
+    $('toneChips').innerHTML = tones.map(([k, n]) => `<button type="button" class="chip" data-tone="${k}" aria-pressed="${state.tone === k}">${k !== 'todos' ? `<span class="dot ${k}"></span>` : ''}${n}</button>`).join('');
+    document.querySelectorAll('#nav a').forEach(a => a.setAttribute('aria-current', String(a.dataset.cat === state.cat)));
+  }
+  $('catChips').addEventListener('click', e => { const b = e.target.closest('[data-cat]'); if (!b) return; state.cat = b.dataset.cat; renderChips(); renderGrid(); });
+  $('toneChips').addEventListener('click', e => { const b = e.target.closest('[data-tone]'); if (!b) return; state.tone = b.dataset.tone; renderChips(); renderGrid(); });
+  $('q').addEventListener('input', e => { state.q = e.target.value; renderGrid(); });
+  $('sort').addEventListener('change', e => { state.sort = e.target.value; renderGrid(); });
+
+  const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  function visible() {
+    let list = DESTAQUE.map(id => byId[id]);
+    if (state.cat !== 'todos') list = list.filter(p => p.cat === state.cat);
+    if (state.tone !== 'todos') list = list.filter(p => p.tons.includes(state.tone));
+    if (state.q.trim()) { const q = norm(state.q.trim()); list = list.filter(p => norm(p.nome + ' ' + p.desc + ' ' + catName(p.cat)).includes(q)); }
+    if (state.sort === 'menor') list.sort((a, b) => a.preco - b.preco);
+    if (state.sort === 'maior') list.sort((a, b) => b.preco - a.preco);
+    if (state.sort === 'nome') list.sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+    return list;
+  }
+  const catName = id => (CATS.find(c => c.id === id) || {}).nome || '';
+  const toneOf = p => cardTone[p.id] || (state.tone !== 'todos' && p.tons.includes(state.tone) ? state.tone : p.tons[0]);
+
+  function cardHTML(p) {
+    const t = toneOf(p);
+    const needs = p.aro ? 'Escolher aro' : p.letra ? 'Escolher letra' : 'Adicionar';
+    return `<article class="card" data-id="${p.id}">
+      <button type="button" class="card-media" data-open="${p.id}" aria-label="Ver detalhes: ${esc(p.nome)}">${art(p.art, t)}<span class="tag">Prata 925</span></button>
+      <div class="card-body">
+        <h3>${esc(p.nome)}</h3>
+        <div class="card-row"><span class="price num">${money(p.preco)}</span>
+          <div class="tones" role="group" aria-label="Tom de ${esc(p.nome)}">${p.tons.map(k => `<button type="button" class="tone-btn" data-tone-of="${p.id}" data-t="${k}" aria-pressed="${k === t}" aria-label="${TONES[k]}"><span class="dot ${k}"></span></button>`).join('')}</div>
+        </div>
+        <button type="button" class="add" data-add="${p.id}">${needs}</button>
+      </div>
+    </article>`;
+  }
+  function renderGrid() {
+    const list = visible();
+    $('count').textContent = list.length === 1 ? '1 peça' : `${list.length} peças`;
+    $('grid').innerHTML = list.length ? list.map(cardHTML).join('')
+      : `<div class="empty"><p>Nenhuma peça com esses filtros.</p><button type="button" class="btn ghost" id="clearF">Limpar filtros</button></div>`;
+  }
+  $('grid').addEventListener('click', e => {
+    const tb = e.target.closest('[data-tone-of]');
+    if (tb) {
+      const p = byId[tb.dataset.toneOf]; cardTone[p.id] = tb.dataset.t;
+      const card = tb.closest('.card'); card.outerHTML = cardHTML(p);
+      const again = document.querySelector(`[data-tone-of="${p.id}"][data-t="${tb.dataset.t}"]`); if (again) again.focus();
+      return;
+    }
+    const ob = e.target.closest('[data-open]'); if (ob) return openProduct(ob.dataset.open, ob);
+    const ab = e.target.closest('[data-add]');
+    if (ab) { const p = byId[ab.dataset.add]; if (p.aro || p.letra) return openProduct(p.id, ab); addToCart(p.id, toneOf(p), null, null, 1); return; }
+    if (e.target.id === 'clearF') { state.cat = 'todos'; state.tone = 'todos'; state.q = ''; $('q').value = ''; renderChips(); renderGrid(); }
+  });
+
+  /* ---------- Painel do produto ---------- */
+  let current = null, lastFocus = null;
+  const m = { tone: null, qty: 1 };
+  $('mAro').innerHTML = `<option value="">Selecione o aro</option>` + AROS.map(a => `<option value="${a}">Aro ${a} · volta de ${a + 40} mm</option>`).join('');
+  $('mLetra').innerHTML = LETRAS.map(l => `<option value="${l}">${l}</option>`).join('');
+  function paintModal() {
+    const p = current;
+    $('mMedia').innerHTML = art(p.art, m.tone, { letra: $('mLetra').value });
+    $('mTones').innerHTML = p.tons.map(k => `<button type="button" class="chip" data-mt="${k}" aria-pressed="${k === m.tone}"><span class="dot ${k}"></span>${TONES[k]}</button>`).join('');
+    $('mQty').textContent = m.qty;
+    $('mPrice').textContent = money(p.preco * m.qty);
+  }
+  function openProduct(id, from) {
+    current = byId[id]; lastFocus = from || document.activeElement;
+    m.tone = toneOf(current); m.qty = 1;
+    $('mCat').textContent = `${catName(current.cat)} · prata 925 italiana`;
+    $('mTitle').textContent = current.nome;
+    $('mDesc').textContent = current.desc;
+    $('mAroBox').hidden = !current.aro; $('mAro').value = '';
+    $('mLetraBox').hidden = !current.letra; $('mLetra').value = 'A';
+    $('mErr').textContent = '';
+    paintModal();
+    $('scrim').hidden = false; $('modal').hidden = false; lock(true);
+    $('mClose').focus();
+  }
+  function closeModal() { $('modal').hidden = true; if ($('drawer').hidden) { $('scrim').hidden = true; lock(false); } if (lastFocus && lastFocus.isConnected) lastFocus.focus(); }
+  $('mTones').addEventListener('click', e => { const b = e.target.closest('[data-mt]'); if (!b) return; m.tone = b.dataset.mt; paintModal(); $('mTones').querySelector(`[data-mt="${m.tone}"]`).focus(); });
+  $('mLetra').addEventListener('change', paintModal);
+  $('mAro').addEventListener('change', () => { $('mErr').textContent = ''; });
+  $('mMinus').addEventListener('click', () => { m.qty = Math.max(1, m.qty - 1); paintModal(); });
+  $('mPlus').addEventListener('click', () => { m.qty = Math.min(20, m.qty + 1); paintModal(); });
+  $('mClose').addEventListener('click', closeModal);
+  $('mGuide').addEventListener('click', () => { lastFocus = null; closeModal(); });
+  $('mAdd').addEventListener('click', () => {
+    const p = current;
+    if (p.aro && !$('mAro').value) { $('mErr').textContent = 'Escolha o aro para continuar. Se não souber, use o guia de aros.'; $('mAro').focus(); return; }
+    addToCart(p.id, m.tone, p.aro ? +$('mAro').value : null, p.letra ? $('mLetra').value : null, m.qty);
+    closeModal();
+  });
+
+  /* ---------- Sacola ---------- */
+  const keyOf = (id, tone, aro, letra) => [id, tone, aro || '', letra || ''].join('|');
+  function addToCart(id, tone, aro, letra, qty) {
+    const k = keyOf(id, tone, aro, letra);
+    const it = cart.find(i => i.k === k);
+    if (it) it.qty = Math.min(20, it.qty + qty); else cart.push({ k, id, tone, aro, letra, qty });
+    save(); renderCart(); toast(`${byId[id].nome} na sacola`);
+  }
+  const optsTxt = i => [TONES[i.tone], i.aro ? `aro ${i.aro}` : '', i.letra ? `letra ${i.letra}` : ''].filter(Boolean).join(' · ');
+  const total = () => cart.reduce((s, i) => s + byId[i.id].preco * i.qty, 0);
+  function orderText() {
+    const lines = cart.map(i => `• ${i.qty}x ${byId[i.id].nome} (${optsTxt(i)}): ${money(byId[i.id].preco * i.qty)}`);
+    return `Olá! Quero fazer este pedido na B.STEFFEN:\n\n${lines.join('\n')}\n\nSubtotal: ${money(total())}\n\nPodemos combinar frete e pagamento?`;
+  }
+  function renderCart() {
+    const n = cart.reduce((s, i) => s + i.qty, 0);
+    $('bagCount').textContent = n; $('bagCount').dataset.zero = String(n === 0);
+    $('bagBtn').setAttribute('aria-label', `Abrir sacola, ${n} ${n === 1 ? 'item' : 'itens'}`);
+    if (!cart.length) {
+      $('items').innerHTML = `<div class="drawer-empty">${art('h-coracao', 'ouro')}<p>Sua sacola está vazia.</p><a class="btn ghost" href="#colecao" id="emptyGo">Ver coleção</a></div>`;
+      $('dFoot').hidden = true; return;
+    }
+    $('dFoot').hidden = false;
+    $('items').innerHTML = cart.map(i => {
+      const p = byId[i.id];
+      return `<div class="item" data-k="${esc(i.k)}"><div class="thumb">${art(p.art, i.tone, { letra: i.letra })}</div>
+        <div><h3>${esc(p.nome)}</h3><div class="opts">${esc(optsTxt(i))}</div>
+          <div class="qty" role="group" aria-label="Quantidade de ${esc(p.nome)}"><button type="button" data-q="-1" aria-label="Diminuir">−</button><output class="num">${i.qty}</output><button type="button" data-q="1" aria-label="Aumentar">+</button></div></div>
+        <div class="item-right"><span class="price num">${money(p.preco * i.qty)}</span><button type="button" class="rm" data-rm>Remover</button></div></div>`;
+    }).join('');
+    $('subtotal').textContent = money(total());
+    const msg = encodeURIComponent(orderText());
+    $('waBtn').href = WHATSAPP ? `https://wa.me/${WHATSAPP}?text=${msg}` : `https://wa.me/?text=${msg}`;
+    $('copyStatus').textContent = '';
+  }
+  $('items').addEventListener('click', e => {
+    if (e.target.id === 'emptyGo') { lastFocus = null; closeDrawer(); return; }
+    const row = e.target.closest('.item'); if (!row) return;
+    const it = cart.find(i => i.k === row.dataset.k); if (!it) return;
+    const qb = e.target.closest('[data-q]');
+    if (qb) { it.qty += +qb.dataset.q; if (it.qty < 1) cart = cart.filter(i => i !== it); }
+    if (e.target.closest('[data-rm]')) cart = cart.filter(i => i !== it);
+    save(); renderCart();
+    const again = $('items').querySelector(`[data-k="${CSS.escape(row.dataset.k)}"] [data-q="${qb ? qb.dataset.q : 1}"]`);
+    if (again) again.focus(); else $('dClose').focus();
+  });
+  $('copyBtn').addEventListener('click', () => {
+    const txt = orderText();
+    const ok = () => { $('copyStatus').textContent = 'Pedido copiado. Cole na conversa do WhatsApp.'; };
+    const fallback = () => {
+      const ta = document.createElement('textarea'); ta.value = txt; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      let done = false; try { done = document.execCommand('copy'); } catch (e) {}
+      ta.remove(); $('copyStatus').textContent = done ? 'Pedido copiado. Cole na conversa do WhatsApp.' : 'Não deu para copiar aqui. Use o botão do WhatsApp.';
+    };
+    try { navigator.clipboard.writeText(txt).then(ok, fallback); } catch (e) { fallback(); }
+  });
+  function openDrawer() { lastFocus = document.activeElement; $('scrim').hidden = false; $('drawer').hidden = false; lock(true); $('dClose').focus(); }
+  function closeDrawer() { $('drawer').hidden = true; if ($('modal').hidden) { $('scrim').hidden = true; lock(false); } if (lastFocus && lastFocus.isConnected) lastFocus.focus(); }
+  $('bagBtn').addEventListener('click', openDrawer);
+  $('dClose').addEventListener('click', closeDrawer);
+  $('scrim').addEventListener('click', () => { if (!$('modal').hidden) closeModal(); else closeDrawer(); });
+  document.addEventListener('keydown', e => { if (e.key !== 'Escape') return; if (!$('modal').hidden) closeModal(); else if (!$('drawer').hidden) closeDrawer(); });
+  const lock = on => { document.documentElement.style.overflow = on ? 'hidden' : ''; };
+
+  let tt = null;
+  function toast(txt) {
+    $('toastTxt').textContent = txt; $('toast').hidden = false;
+    clearTimeout(tt); tt = setTimeout(() => { $('toast').hidden = true; }, 3200);
+  }
+  $('toastBtn').addEventListener('click', () => { $('toast').hidden = true; openDrawer(); });
+
+  /* ---------- Guia de aros ---------- */
+  let mode = 'circ';
+  $('aroTable').innerHTML =
+    `<tr><th scope="row">Aro</th>${AROS.map(a => `<td data-aro="${a}">${a}</td>`).join('')}</tr>`
+    + `<tr><th scope="row">Volta (mm)</th>${AROS.map(a => `<td data-aro="${a}">${a + 40}</td>`).join('')}</tr>`
+    + `<tr><th scope="row">Diâmetro (mm)</th>${AROS.map(a => `<td data-aro="${a}">${((a + 40) / Math.PI).toFixed(1).replace('.', ',')}</td>`).join('')}</tr>`;
+  function calcAro() {
+    const v = parseFloat(String($('medida').value).replace(',', '.'));
+    document.querySelectorAll('#aroTable td').forEach(r => r.classList.remove('hit'));
+    if (!isFinite(v) || v <= 0) { $('aroOut').textContent = '?'; $('aroTxt').textContent = 'Digite a medida em milímetros'; return; }
+    const circ = mode === 'circ' ? v : v * Math.PI;
+    const aro = Math.ceil(circ - 40 - 0.25);
+    if (aro < AROS[0] || aro > AROS[AROS.length - 1]) { $('aroOut').textContent = '?'; $('aroTxt').textContent = `Fora da tabela (aros ${AROS[0]} a ${AROS[AROS.length - 1]}). Confira a medida.`; return; }
+    $('aroOut').textContent = aro;
+    $('aroTxt').textContent = mode === 'circ' ? `é o seu aro (volta de ${v.toString().replace('.', ',')} mm)` : `é o seu aro (volta de ${circ.toFixed(1).replace('.', ',')} mm)`;
+    document.querySelectorAll(`#aroTable td[data-aro="${aro}"]`).forEach(c => c.classList.add('hit'));
+  }
+  function setMode(next) {
+    mode = next;
+    $('modeCirc').setAttribute('aria-pressed', String(mode === 'circ')); $('modeDiam').setAttribute('aria-pressed', String(mode === 'diam'));
+    $('medidaLabel').textContent = mode === 'circ' ? 'Volta do dedo, em mm' : 'Diâmetro interno do anel, em mm';
+    $('medida').value = mode === 'circ' ? 56 : 17.8; $('medida').min = mode === 'circ' ? 40 : 13; $('medida').max = mode === 'circ' ? 80 : 26;
+    calcAro();
+  }
+  $('modeCirc').addEventListener('click', () => setMode('circ'));
+  $('modeDiam').addEventListener('click', () => setMode('diam'));
+  $('medida').addEventListener('input', calcAro);
+
+  /* ---------- Links por categoria (#brincos, #aneis...) ---------- */
+  function route() {
+    const h = location.hash.slice(1);
+    if (CATS.some(c => c.id === h)) {
+      state.cat = h; renderChips(); renderGrid();
+      requestAnimationFrame(() => $('colecao').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }));
+    }
+  }
+  window.addEventListener('hashchange', route);
+  // Clicar de novo na mesma categoria não dispara hashchange: aplica o filtro mesmo assim
+  document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (a && a.getAttribute('href') === location.hash) route(); });
+
+  renderChips(); renderGrid(); renderCart(); calcAro(); route();
+})();
+</script>
+
+</body></html>
